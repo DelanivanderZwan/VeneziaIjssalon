@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for recept in ijsrecept %}
+        <div class="container">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">naam</th>
+                    <th scope="col">bereidingswijze</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><div class="text-center"><img src="/img/{{ recept.naam }}.jpg" class="rounded-circle" alt="ijs" style="width: 150px; height: 150px;"></div></td>
+                    <td>{{ recept.naam }}</td>
+                    <td>{{ recept.recept }}</td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    {% endfor %}
+{% endblock %}
